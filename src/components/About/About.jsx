@@ -9,9 +9,12 @@ export default class About extends Component {
         return (
             <div>
                 <div className={`${style.cont}`}>
-                    <div className={`${style.image}`}>
-                        <img src={img} alt="profile img" />
+                    <div className={`${style.description}`}>
+                    <p>Thank you very much for visiting my project. Please send any errors or comments you have to my <br/>e-mail: <a href="mailto:lucaspardieux@gmail.com?Subject=comentario%20lasiiette%20restaurant" className={`${style.email}`}>lucaspardieux@gmail.com</a></p>
                     </div>
+                    {/* <div className={`${style.image}`}>
+                        <img src={img} alt="profile img" />
+                    </div> */}
                     <div className={`${style.information}`}>
                         <h1>Lucas Pardieux</h1>
                         <h3>Page developed with:</h3>
