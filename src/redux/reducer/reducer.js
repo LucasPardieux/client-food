@@ -44,7 +44,7 @@ export const getAllRecipes = () => async (dispatch) =>{
 
     try {
         dispatch(setLoading(true));
-        const recipes = await axios.get("http://localhost:3001/recipes/");
+        const recipes = await axios.get("https://food-api-project.herokuapp.com/recipes/");
         dispatch(setAllRecipes(recipes.data));
         dispatch(setLoading(false));
     } catch (error) {
@@ -54,7 +54,7 @@ export const getAllRecipes = () => async (dispatch) =>{
 
 export const getRecipe = (name) => async (dispatch) =>{
         dispatch(setLoading(true));
-    return axios.get(`http://localhost:3001/recipes?name=${name}`)
+    return axios.get(`https://food-api-project.herokuapp.com/recipes?name=${name}`)
         .then((response) => response.data)
         .then((data) =>{
             dispatch(setRecipe(data))
@@ -65,7 +65,7 @@ export const getRecipe = (name) => async (dispatch) =>{
 
 export const getAllDiets = () => async (dispatch) => {
 
-    return axios.get(`http://localhost:3001/diet/`)
+    return axios.get(`https://food-api-project.herokuapp.com/diet/`)
         .then((response) => response.data)
         .then((data) =>{
             dispatch(setAllDiets(data))
@@ -77,7 +77,7 @@ export const postRecipe = (data) =>{
     try {
         return axios({
             method: "post",
-            url: "http://localhost:3001/recipes",
+            url: "https://food-api-project.herokuapp.com/recipes",
             data: data
         })
     } catch (error) {
