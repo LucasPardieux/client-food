@@ -14,6 +14,22 @@ const Card = (props) => {
             </div>
             <div>
                 <h3 className={`${style.name}`}>{props.title}</h3>
+                <div className={`${style.information}`}>
+                    <h4 className={`${style.subTitle}`}>Health Score: </h4>
+                    <div>
+                        <h1>
+                            Hola Mundo!
+                        </h1>
+                    </div>
+                    <p>{props.healthScore}</p>
+                    <h4 className={`${style.subTitle}`}>Servings: </h4>
+                    <div>
+                        <p>Chau</p>
+                    </div>
+                    <p>{props.servings}</p>
+                    <h4 className={`${style.subTitle}`}>Diets:</h4>
+                    <p>{props.RecipeDiet?props.RecipeDiet:makeDiets(props.diets)}</p>
+                </div>
             </div>
         </div>
     )
