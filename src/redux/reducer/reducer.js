@@ -46,6 +46,7 @@ export const getAllRecipes = () => async (dispatch) =>{
         dispatch(setLoading(true));
         const recipes = await axios.get("https://food-api-project.herokuapp.com/recipes/");
         dispatch(setAllRecipes(recipes.data));
+        console.log("blabla")
         dispatch(setLoading(false));
     } catch (error) {
         console.log(error);
@@ -58,7 +59,6 @@ export const getRecipe = (name) => async (dispatch) =>{
         .then((response) => response.data)
         .then((data) =>{
             dispatch(setRecipe(data))
-            dispatch(setLoading(false))
         })
         .catch((error)=> console.log(error))
 }
@@ -69,6 +69,7 @@ export const getAllDiets = () => async (dispatch) => {
         .then((response) => response.data)
         .then((data) =>{
             dispatch(setAllDiets(data))
+            //algo va aca
         })
         .catch((error)=> console.log(error))
 }
