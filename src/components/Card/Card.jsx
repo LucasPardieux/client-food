@@ -21,6 +21,9 @@ const Card = (props) => {
                     <div>
                         <p>Chau</p>
                     </div>
+                    <div>
+                        <a>Algo</a>
+                    </div>
                     <p>{props.servings}</p>
                     <h4 className={`${style.subTitle}`}>Diets:</h4>
                     <p>{props.RecipeDiet?props.RecipeDiet:makeDiets(props.diets)}</p>
